@@ -27,3 +27,21 @@ CREATE TABLE IF NOT EXISTS `full-stack-ecommerce`.`product` (
   KEY `fk_category` (`category_id`),
   CONSTRAINT `fk_category` FOREIGN KEY (`category_id`) REFERENCES `product_category` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT = 1;
+
+-- Criando tabela de paises:
+CREATE TABLE `country` (
+  `id` smallint unsigned NOT NULL,
+  `code` varchar(2) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+-- Criando tabela de estados:
+CREATE TABLE `state` (
+  `id` smallint unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `country_id` smallint unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_country` (`country_id`),
+  CONSTRAINT `fk_country` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1;

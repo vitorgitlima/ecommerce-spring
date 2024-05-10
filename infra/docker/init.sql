@@ -28,6 +28,8 @@ CREATE TABLE IF NOT EXISTS `full-stack-ecommerce`.`product` (
   CONSTRAINT `fk_category` FOREIGN KEY (`category_id`) REFERENCES `product_category` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT = 1;
 
+DROP TABLE IF EXISTS `country`;
+
 -- Criando tabela de paises:
 CREATE TABLE `country` (
   `id` smallint unsigned NOT NULL,
@@ -35,6 +37,8 @@ CREATE TABLE `country` (
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS `state`;
 
 -- Criando tabela de estados:
 CREATE TABLE `state` (

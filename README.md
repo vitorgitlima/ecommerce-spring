@@ -14,18 +14,18 @@ Before you begin, ensure you have the following installed:
 ## Getting Started
 
 1. **Clone the repository:**
-   \```
+   \```console
    git clone https://github.com/vitorgitlima/ecommerce-spring
    cd ecommerce-spring
    \```
 
 2. **Navigate to the Docker directory:**
-   \```
+   \```console
    cd /ecommerce-spring/infra/docker
    \```
 
 3. **Run the Docker Compose command:**
-   \```
+   \```console
    docker compose up -d
    \```
 
